@@ -122,12 +122,18 @@ html, body, [class*="css"] {
     text-align: center;
     font-size: 3rem;
     font-weight: 800;
+    margin-bottom: 0.2rem;
+    animation: popIn 0.7s ease-out;
+}
+
+.hero-title .title-gradient {
     background: linear-gradient(90deg, #ff6a88, #ff99ac, #ff6a88);
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shine 4s linear infinite, popIn 0.7s ease-out;
-    margin-bottom: 0.2rem;
+    color: transparent;
+    animation: shine 4s linear infinite;
 }
 
 @keyframes shine {
@@ -152,6 +158,7 @@ html, body, [class*="css"] {
 /* Beating heart emoji */
 .beating-heart {
     display: inline-block;
+    margin-right: 0.35rem;
     animation: beat 1.15s ease-in-out infinite;
 }
 
@@ -365,8 +372,8 @@ with st.sidebar:
 # Hero header
 # ---------------------------------------------------------------------------
 st.markdown(
-    "<div class='hero-title'><span class='beating-heart'>❤️</span> "
-    "Heart Stroke Prediction</div>",
+    "<div class='hero-title'><span class='beating-heart'>❤️</span>"
+    "<span class='title-gradient'>Heart Stroke Prediction</span></div>",
     unsafe_allow_html=True,
 )
 st.markdown(
